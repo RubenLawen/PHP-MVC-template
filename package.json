@@ -1,0 +1,22 @@
+{
+  "name": "php-mvc-template",
+  "version": "1.0.0",
+  "description": "Fast and optimized MVC php template.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RubenLawen/PHP-MVC-template.git"
+  },
+  "keywords": [
+    "php"
+  ],
+  "author": "RubenLawen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RubenLawen/PHP-MVC-template/issues"
+  },
+  "homepage": "https://github.com/RubenLawen/PHP-MVC-template#readme"
+}
