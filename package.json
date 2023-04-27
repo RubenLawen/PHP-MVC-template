@@ -4,7 +4,7 @@
   "description": "Fast and optimized MVC php template.",
   "main": "index.js",
   "bin": {
-    "app": "build/build.js"
+    "build": "build/build.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/RubenLawen/PHP-MVC-template#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "prompts": "^2.4.2"
   }
 }

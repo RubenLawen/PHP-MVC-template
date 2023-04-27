@@ -1,20 +1,16 @@
-// #!/usr/bin/env node
+#!/usr/bin/env node
 
 const prompts = require("prompts");
 
 (async () => {
     let response = await prompts({
-      type: "select",
+      type: "text",
       name: "question",
-      message: "Choisissez une option !",
-      choices: [
-        { title: "Poser une question à chatGPT ?", value: "question" },
-        { title: "Vérifier une probabilité", value: "proba" },
-      ],
+      message: "Choose the name of your project !",
       initial: 1,
     });
 
-    console.log("észdzed")
+    console.log(response.question)
       
     process.exit(1);
   })();
