@@ -3,6 +3,9 @@
   "version": "2.2.5",
   "description": "Fast and optimized MVC php template.",
   "main": "index.js",
+  "bin": {
+    "test": "bin/test.js"
+  },
   "scripts": {
     "test": "node index.js"
   },
