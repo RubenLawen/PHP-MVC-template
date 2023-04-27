@@ -1,6 +1,6 @@
 {
   "name": "@php-mvc-template/php-mvc-template",
-  "version": "2.2.5",
+  "version": "3.0.0",
   "description": "Fast and optimized MVC php template.",
   "main": "index.js",
   "bin": {
