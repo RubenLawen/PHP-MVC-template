@@ -3,8 +3,8 @@
   "version": "3.0.3",
   "description": "Fast and optimized MVC php template.",
   "main": "index.js",
-  "scripts": {
-    "build": "node index.js"
+  "bin": {
+    "app": "build/build.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/RubenLawen/PHP-MVC-template/issues"
   },
-  "homepage": "https://github.com/RubenLawen/PHP-MVC-template#readme"
+  "homepage": "https://github.com/RubenLawen/PHP-MVC-template#readme",
+  "dependencies": {
+    "prompts": "^2.4.2"
+  }
 }
