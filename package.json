@@ -1,13 +1,10 @@
 {
-  "name": "@php-mvc-template/php-mvc-template",
+  "name": "php-mvc-template",
   "version": "3.0.0",
   "description": "Fast and optimized MVC php template.",
   "main": "index.js",
-  "bin": {
-    "test": "bin/test.js"
-  },
   "scripts": {
-    "test": "node index.js"
+    "build": "node index.js"
   },
   "repository": {
     "type": "git",
