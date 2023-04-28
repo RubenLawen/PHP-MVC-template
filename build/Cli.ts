@@ -3,7 +3,7 @@
 const prompts = require("prompts");
 const colors = require("colors");
 const emoji = require("node-emoji");
-const { Build } = require("./Build.ts");
+import Build from "./Build";
 
 (async () => {
   let flag = true;
@@ -24,7 +24,7 @@ const { Build } = require("./Build.ts");
     ) {
       flag = false;
       let build = new Build(response.question);
-      // console.log(build.initDir())
+      console.log(build.initDir())
       process.exit(1);
     } else {
       if (!response.question.match(/^[A-Za-z\s]*$/))
