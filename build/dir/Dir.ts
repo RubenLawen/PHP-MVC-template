@@ -4,7 +4,7 @@ export default class Dir
 {
 
     public async createDir() {
-        fs.mkdirSync("dzded");
+        fs.mkdirSync("test")
     }
 
 }

@@ -3,7 +3,6 @@
   "type": "commonjs",
   "version": "3.0.6",
   "description": "Fast and optimized MVC php template.",
-  "types": "commonjs",
   "bin": {
     "build": "build/Cli.ts"
   },

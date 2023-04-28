@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env ts-node
 
 const prompts = require("prompts");
 const colors = require("colors");
