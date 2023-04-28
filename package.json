@@ -1,10 +1,11 @@
 {
   "name": "php-mvc-template",
+  "type": "commonjs",
   "version": "3.0.4",
   "description": "Fast and optimized MVC php template.",
-  "main": "index.js",
+  "types": "commonjs",
   "bin": {
-    "build": "build/build.js"
+    "build": "build/Cli.ts"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,12 @@
   },
   "homepage": "https://github.com/RubenLawen/PHP-MVC-template#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "fs": "^0.0.1-security",
+    "node-emoji": "^1.11.0",
     "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.2"
   }
 }
