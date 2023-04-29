@@ -6,7 +6,7 @@ const emoji = require("node-emoji");
 import Build from "./Build";
 
 (async () => {
-  let flag = true;
+  let flag: boolean = true;
 
   while (flag) {
     let response = await prompts({
@@ -24,8 +24,17 @@ import Build from "./Build";
     ) {
       flag = false;
       let build = new Build(response.question);
-      console.log(build.initDir())
-      process.exit(1);
+      let existedProject = await build.getDirExist();
+      if(existedProject){
+        console.log(
+          emoji.get("x") +
+            colors.red(' A project already exists, type "npx reset" to perform this command !')
+        );
+      } else{
+        build.initDir();
+        build.initMvc();
+        process.exit(1);
+      }
     } else {
       if (!response.question.match(/^[A-Za-z\s]*$/))
         console.log(

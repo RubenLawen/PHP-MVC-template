@@ -7,12 +7,20 @@ export default class Build
 
     constructor(nom: string = "Test"){
         this.name = nom;
-        this.dir = new Dir();
+        this.dir = new Dir(this.name);
+    }
+
+    public async getDirExist(){
+        return this.dir.existDir();
     }
 
     public async initDir() {
         this.dir.createDir();
-        // return this.name;
     }
+
+    public async initMvc(){
+        this.dir.createMvc();
+    }
+
 
 }

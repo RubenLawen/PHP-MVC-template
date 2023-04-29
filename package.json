@@ -4,7 +4,8 @@
   "version": "3.1.1",
   "description": "Fast and optimized MVC php template.",
   "bin": {
-    "build": "build/Cli.ts"
+    "build": "build/Cli.ts",
+    "reset": "build/CliReset.ts"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,8 @@
     "colors": "^1.4.0",
     "fs": "^0.0.1-security",
     "node-emoji": "^1.11.0",
-    "prompts": "^2.4.2"
+    "prompts": "^2.4.2",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/node": "^18.16.2"
