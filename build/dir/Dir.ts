@@ -19,6 +19,8 @@ export default class Dir
         fs.mkdirSync("tests");
         fs.mkdirSync("src");
         fs.mkdirSync("public");
+        fs.mkdirSync("public/img");
+        fs.mkdirSync("public/js");
     }
 
     public async createMvc() {
