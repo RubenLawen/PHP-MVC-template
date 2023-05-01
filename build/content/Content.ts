@@ -206,7 +206,7 @@ class Route {
 
     public function call() {
             $rep = explode("@", $this->callable);
-            $controller = "Hotel\\\\Controllers\\\\".$rep[0];
+            $controller = "${this.name}\\\\Controllers\\\\".$rep[0];
             $controller = new $controller();
 
         return call_user_func_array([$controller, $rep[1]], $this->matches);
