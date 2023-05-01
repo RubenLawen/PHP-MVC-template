@@ -33,9 +33,15 @@ import Build from "./Build";
       } else{
         build.initDir();
         build.initMvc();
+        build.iniFileGlobal();
         build.initFileTest();
         build.initFileMvc();
         build.initFilePublic();
+        build.initContentGlobal();
+        build.initContentTest();
+        build.initContentSrc();
+        build.initContentMvc();
+        build.initContentPublic();
         process.exit(1);
       }
     } else {

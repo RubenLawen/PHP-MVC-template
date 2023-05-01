@@ -1,16 +1,19 @@
 import Dir from "./dir/Dir";
 import File from "./file/File";
+import Content from "./content/Content";
 
 export default class Build
 {
     private name: string;
     private dir: Dir;
     private file: File;
+    private content: Content;
 
     constructor(nom: string = "Test"){
         this.name = nom;
         this.dir = new Dir(this.name);
         this.file = new File(this.name);
+        this.content = new Content(this.name)
     }
 
     public async getDirExist(){
@@ -23,6 +26,10 @@ export default class Build
 
     public async initMvc(){
         this.dir.createMvc();
+    }
+
+    public async iniFileGlobal(){
+        this.file.createFileHome();
     }
 
     public async initFileTest(){
@@ -39,6 +46,26 @@ export default class Build
 
     public async initFilePublic(){
         this.file.createFilePublic();
+    }
+
+    public async initContentGlobal(){
+        this.content.createGlobalContent();
+    }
+
+    public async initContentTest(){
+        this.content.createTestContent();
+    }
+
+    public async initContentSrc(){
+        this.content.createSrcContent();
+    }
+
+    public async initContentMvc(){
+        this.content.createMvcContent();
+    }
+
+    public async initContentPublic(){
+        this.content.createPublicContent();
     }
 
 }

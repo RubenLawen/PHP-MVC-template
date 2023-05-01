@@ -8,6 +8,11 @@ export default class File
         this.name = nom;
     }
 
+    public async createFileHome(){
+        fs.appendFileSync(`composer.json`,'');
+        fs.appendFileSync(`README.md`,'');
+    }
+
     public async createFileTest() {
         fs.appendFileSync(`tests/${this.name}Test.php`,'');
     }

@@ -23,6 +23,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "fs": "^0.0.1-security",
+    "js-beautify": "^1.14.7",
     "node-emoji": "^1.11.0",
     "prompts": "^2.4.2",
     "ts-node": "^10.9.1"
