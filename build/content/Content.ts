@@ -363,10 +363,10 @@ class Bdd
 }`;
     const elController: string = `<?php
 
-namespace Aze\\Controllers;
+namespace ${this.name}\\Controllers;
 
-/** Class AzeController **/
-class AzeController extends Controller
+/** Class ${this.name}Controller **/
+class ${this.name}Controller extends Controller
 {
     function __construct() {
         parent::__construct();
@@ -393,10 +393,10 @@ class AzeController extends Controller
 }`;
     const controller: string = `<?php
 
-namespace Aze\\Controllers;
+namespace ${this.name}\\Controllers;
 
-use Aze\\Models\\AzeManager;
-use Aze\\Validator;
+use ${this.name}\\Models\\${this.name}Manager;
+use ${this.name}\\Validator;
 
 /** Class Controller **/
 class Controller
