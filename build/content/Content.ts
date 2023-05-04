@@ -361,28 +361,20 @@ class Bdd
         $this->bdd->setAttribute(\\PDO::ATTR_ERRMODE, \\PDO::ERRMODE_EXCEPTION);
     }
 }`;
-    const controller: string = `<?php
+    const elController: string = `<?php
 
-namespace ${this.name}\\Controllers;
+namespace Aze\\Controllers;
 
-use ${this.name}\\Models\\${this.name}Manager;
-use ${this.name}\\Validator;
-
-/** Class ${this.name}Controller **/
-class ${this.name}Controller
+/** Class AzeController **/
+class AzeController extends Controller
 {
-    private $manager;
-    private $validator;
-
-    public function __construct()
-    {
-        $this->manager = new ${this.name}Manager();
-        $this->validator = new Validator();
+    function __construct() {
+        parent::__construct();
     }
 
     public function index()
     {
-        require VIEWS . '${this.name}/accueil.php';
+        $this->returnView("Aze/accueil.php");
     }
 
     // Example Function
@@ -399,6 +391,30 @@ class ${this.name}Controller
         }
     }
 }`;
+    const controller: string = `<?php
+
+namespace Aze\\Controllers;
+
+use Aze\\Models\\AzeManager;
+use Aze\\Validator;
+
+/** Class Controller **/
+class Controller
+{
+    public $manager;
+    public $validator;
+
+    public function __construct()
+    {
+        $this->manager = new AzeManager();
+        $this->validator = new Validator();
+    }
+
+    public function returnView(String $view){
+        require VIEWS . $view;
+    }
+
+}`
     const config: string = `<?php
 define("SRC", '../src/');
 define("CONTROLLERS", '../src/Controllers/');
@@ -417,7 +433,8 @@ define('PASSWORD', '');`;
     fs.writeFileSync(`src/Models/${this.name}Manager.php`, elManager);
     fs.writeFileSync(`src/Models/${this.name}.php`, el);
     fs.writeFileSync(`src/Models/Bdd.php`, bdd);
-    fs.writeFileSync(`src/Controllers/${this.name}Controller.php`, controller);
+    fs.writeFileSync(`src/Controllers/${this.name}Controller.php`, elController);
+    fs.writeFileSync(`src/Controllers/Controller.php`, controller);
     fs.writeFileSync(`src/config/config.php`, config);
   }
 

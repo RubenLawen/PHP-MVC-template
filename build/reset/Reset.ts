@@ -14,6 +14,12 @@ export default class Reset
         console.log(emoji.get("white_check_mark") +colors.green(" Tests deleted"));
         await fs.rmSync("composer.json", {recursive: true, force: true});
         console.log(emoji.get("white_check_mark") +colors.green(" Composer.json deleted"));
+        await fs.rmSync("composer.lock", {recursive: true, force: true});
+        console.log(emoji.get("white_check_mark") +colors.green(" Composer.lock deleted"));
+        await fs.rmSync("vendor", {recursive: true, force: true});
+        console.log(emoji.get("white_check_mark") +colors.green(" Vendor deleted"));
+        await fs.rmSync("tsconfig.json", {recursive: true, force: true});
+        console.log(emoji.get("white_check_mark") +colors.green(" tsconfig deleted"));
         await fs.rmSync("README.md", {recursive: true, force: true});
         console.log(emoji.get("white_check_mark") +colors.green(" README.md deleted"));
     }
