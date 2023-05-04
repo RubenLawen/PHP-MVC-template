@@ -1,7 +1,7 @@
 {
   "name": "php-mvc-template",
   "type": "commonjs",
-  "version": "3.1.5",
+  "version": "3.1.6",
   "description": "Fast and optimized MVC php template.",
   "bin": {
     "build": "build/Cli.ts",
