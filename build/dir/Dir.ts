@@ -26,6 +26,7 @@ export default class Dir
     public async createMvc() {
         fs.mkdirSync("src/Controllers")
         fs.mkdirSync("src/Models")
+        fs.mkdirSync("src/Models/Class")
         fs.mkdirSync("src/Views")
         fs.mkdirSync("src/config")
         fs.mkdirSync("src/Views/" + this.name)

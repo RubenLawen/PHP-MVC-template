@@ -36,7 +36,7 @@ export default class File
 
     public async createFileModels() {
         fs.appendFileSync(`src/Models/Bdd.php`,'');
-        fs.appendFileSync(`src/Models/${this.name}.php`,'');
+        fs.appendFileSync(`src/Models/Class/${this.name}.php`,'');
         fs.appendFileSync(`src/Models/${this.name}Manager.php`,'');
     }
 

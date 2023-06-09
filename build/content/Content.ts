@@ -194,7 +194,7 @@ class Route {
 
     public function match($url){
         $url = trim($url, '/');
-        $path = preg_replace('#:([\w]+)#', '([^/]+)', $this->path);
+        $path = preg_replace('#:([\\w]+)#', '([^/]+)', $this->path);
         $regex = "#^$path$#i";
         if(!preg_match($regex, $url, $matches)){
             return false;
@@ -374,7 +374,7 @@ class ${this.name}Controller extends Controller
 
     public function index()
     {
-        $this->returnView("Aze/accueil.php");
+        $this->returnView("${this.name}/accueil.php");
     }
 
     // Example Function
@@ -406,7 +406,7 @@ class Controller
 
     public function __construct()
     {
-        $this->manager = new AzeManager();
+        $this->manager = new ${this.name}Manager();
         $this->validator = new Validator();
     }
 
@@ -431,7 +431,7 @@ define('PASSWORD', '');`;
     fs.writeFileSync(`src/Views/404.php`, error404);
     fs.writeFileSync(`src/Views/${this.name}/accueil.php`, accueil);
     fs.writeFileSync(`src/Models/${this.name}Manager.php`, elManager);
-    fs.writeFileSync(`src/Models/${this.name}.php`, el);
+    fs.writeFileSync(`src/Models/Class/${this.name}.php`, el);
     fs.writeFileSync(`src/Models/Bdd.php`, bdd);
     fs.writeFileSync(`src/Controllers/${this.name}Controller.php`, elController);
     fs.writeFileSync(`src/Controllers/Controller.php`, controller);
